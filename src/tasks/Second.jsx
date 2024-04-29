@@ -57,24 +57,6 @@ import React, { useState, useEffect } from "react";const UserTable = () => {
       }));
     }
   };
-  //   const handleInputChange = (e) => {
-  //     const { name, value } = e.target;
-  //     if (name === "name") {
-  //       const [firstName, lastName] = value.split(" ");
-  //       setEditUserDetails((prevDetails) => ({
-  //         ...prevDetails,
-  //         name: {
-  //           first: firstName,
-  //           last: lastName,
-  //         },
-  //       }));
-  //     } else {
-  //       setEditUserDetails((prevDetails) => ({
-  //         ...prevDetails,
-  //         [name]: value,
-  //       }));
-  //     }
-  //   };
 
   const loadMore = () => {
     setCurrentPage((prevPage) => prevPage + 1);

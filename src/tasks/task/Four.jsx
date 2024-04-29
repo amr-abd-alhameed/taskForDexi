@@ -1,4 +1,4 @@
-/* eslint-disable */ import { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import ActionBar from "./ActionBar";
 import Messages from "./Messages.jsx";
 
@@ -23,14 +23,6 @@ const ChallengeThree = () => {
     ),
     3: <Messages state={state} />,
   };
-
-  //   const componentMap = {
-  //     0: <Messages state={state} />,
-  //     1: <Messages state={state} />,
-  //     2: <Messages state={state} />,
-  //     3: <Messages state={state} />,
-  //   };
-
   const handleNextClick = useCallback(() => {
     if (state < 3) {
       setState(state + 1);

@@ -1,5 +1,22 @@
-import React from "react";
-const One = () => {
+import React, { useState } from "react";const One = () => {
+  const [inputString, setInputString] = useState("");
+  const [result, setResult] = useState("");
+
+  const handleInputChange = (event) => {
+    setInputString(event.target.value);
+  };
+
+  const handleResult = () => {
+    const indexToRemove = removeToMakePalindrome(inputString);
+    if (indexToRemove === -1) {
+      setResult("-1");
+    } else {
+      setResult(
+        `Remove the character at index ${indexToRemove} to make a palindrome.`
+      );
+    }
+  };
+
   function removeToMakePalindrome(string) {
     let left = 0;
     let right = string.length - 1;
@@ -53,9 +70,20 @@ const One = () => {
 
     return -1;
   }
+
   return (
     <div>
-      {console.log(removeToMakePalindrome("aaab"))}
+      <div>
+        <input
+          type="text"
+          value={inputString}
+          onChange={handleInputChange}
+          placeholder="Enter a string"
+        />
+        <button onClick={handleResult}>Get Answer</button>
+        <p>{result}</p>
+      </div>
+      {/* {console.log(removeToMakePalindrome("aaab"))} */}
       {/* {console.log(removeToMakePalindrome("acxycab"))} */}
     </div>
   );
