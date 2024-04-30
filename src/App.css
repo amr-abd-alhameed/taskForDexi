@@ -2,186 +2,84 @@
   text-align: center;
 }
 
-/* user-table.css */
-
-/* .user-table {
-  font-family: "Arial", sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  margin: 20px auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.user-table th,
-.user-table td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.user-table thead th {
-  background-color: #f8f8f8;
-  border-top: 2px solid #e0e0e0;
-  font-weight: bold;
-}
-
-.user-table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-
-
-
-
-
-
-.user-table {
-  border-radius: 10px;
-}
-
-.user-table th,
-.user-table td {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.user-table button {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 8px 12px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.user-table button:hover {
-  background-color: #e0e0e0;
-}
-
-
-.user-table input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-
-.user-table button.load-more {
-  background-color: #e0f0e0;
-  border: 1px solid #c0d0c0;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  display: block;
-  margin: 0 auto;
-}
-
-.user-table button.load-more:hover {
-  background-color: #d0e0d0;
-}
-*/
-
-/* 
-
-.pop-wrapper {
-  position: absolute;
-  background: #37e0c670;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  left: 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0px;
-}
-
-.pop {
-  z-index: 1100;
-  position: relative;
-  background: #3771e0;
-  z-index: 1000;
-  width: 80vw;
-  height: auto;
-  padding: 30px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 30px;
-}
-.pop input {
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.pop button {
-  width: 50%;
-} */
-
 /* Styling for the user table */
 .user-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .user-table th,
 .user-table td {
-  padding: 10px;
+  padding: 5px 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
 .user-table th {
-  background-color: #f2f2f2;
+  background-color: #f9fafb;
+  color: #8895a0;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.user-table td {
+  text-transform: capitalize;
+}
+.name {
+  color: #344655;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.email,
+.nationality {
+  color: #8895a0;
+  margin-top: 8px;
+}
+.email {
+  text-transform: lowercase;
+}
+
+td span {
+  background-color: #d2fed5;
+  color: #47816a;
+  padding: 3px 9px;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
   font-weight: bold;
+
+  width: fit-content;
+}
+
+.user-table tr {
+  background-color: #fff;
+}
+
+.user-table tr:hover {
+  background-color: #e9e9e9;
+}
+
+.parentOne {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.imageWrapper img {
+  border-radius: 50%;
+}
+.parentTwo {
+  display: flex;
+  flex-direction: column;
+}
+.parentTwo .country {
+  font-weight: 600;
+  color: #344655;
 }
 
 /* Styling for the edit pop-up */
-/* .pop-wrapper {
-  position: relative;
-}
-
-.pop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  display: none;
-}
-
-.pop-wrapper:hover .pop {
-  display: block;
-}
-
-.pop input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.pop button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-} */
 
 .pop-wrapper {
   position: absolute;
@@ -208,7 +106,7 @@
 }
 
 .pop input {
-  width: 100%;
+  width: 97%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
@@ -226,11 +124,11 @@
 
 /* Styling for the load more button */
 button {
-  background-color: #008cba;
-  color: white;
-  padding: 10px 20px;
+  background-color: transparent;
+  color: #5f5ae7;
+  font-size: 17px;
+  font-weight: 600;
   border: none;
-  border-radius: 3px;
   cursor: pointer;
   margin-top: 20px;
 }
