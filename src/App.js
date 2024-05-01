@@ -11,9 +11,15 @@ import SecondBeakup from "./tasks/SecondBeakup";
 function App() {
   return (
     <div className="App">
-      <One />
+      <br />
+
+      {/* <One /> */}
+      <br />
+
       {/* <Two /> */}
       {/* <UserTable /> */}
+      <br />
+
       <Second />
 
       <br />
@@ -21,19 +27,19 @@ function App() {
       <br />
       <br />
       <br />
-      <SecondBeakup />
+      {/* <SecondBeakup /> */}
       <br />
       <br />
       <br />
       <br />
       <br />
 
-      <Three />
+      {/* <Three /> */}
       <br />
       <br />
       <br />
 
-      <Four />
+      {/* <Four /> */}
     </div>
   );
 }
